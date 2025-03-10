@@ -2,6 +2,7 @@
 #define SKURVEMOTORCONTROL_H
 
 #include <Arduino.h>
+#include <math.h>
 
 class SKurveMotorControl {
 public:

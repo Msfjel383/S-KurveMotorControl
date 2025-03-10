@@ -1,8 +1,5 @@
-#include "USBAPI.h"
-#include "pins_arduino.h"
-#include "Arduino.h"
 #include "SKurveMotorControl.h"
-#include <math.h>
+
 
 SKurveMotorControl::SKurveMotorControl(float maxAcceleration, float maxDeceleration, float maxJerk) {
     _currentSpeed = 0;

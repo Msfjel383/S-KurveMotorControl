@@ -12,13 +12,27 @@ The SCurveMotion library provides an easy way to control motion with an S-curve 
 
 You can install the SCurveMotion library directly into the Arduino IDE by following these steps:
 
-1. Download the library `.zip` file from the [GitHub repository](https://github.com/yourusername/SCurveMotion) (replace with your actual link).
+1. Download the library `.zip` file.
 2. Open the Arduino IDE.
 3. Go to **Sketch** → **Include Library** → **Add .ZIP Library...**.
 4. Select the downloaded `.zip` file.
 5. The library is now installed and ready to use.
 
 Alternatively, you can clone the repository using Git and place the folder in your Arduino libraries directory.
+
+### Visualizing Data with Better Serial Plotter
+
+To visualize the motion parameters in real-time using the Arduino Serial Plotter, follow these steps:
+
+1. **Install Better Serial Plotter**:
+   - Follow the instructions on [Better Serial Plotter GitHub](https://github.com/nathandunk/BetterSerialPlotter).
+
+2. **Upload the Sketch**:
+   - Upload the example code "plot_all" to your Arduino board.
+
+3. **Open the Serial Plotter**:
+   - The plotter will display graphs of position, velocity, acceleration, and jerk.
+
 
 ## Usage
 
@@ -40,16 +54,11 @@ void setup() {
 void loop() {
   motion.update();  // Update motion state
 
-  // Print motion parameters
-  Serial.print("Position: ");
-  Serial.println(motion.getPos());
-  Serial.print("Velocity: ");
-  Serial.println(motion.getVel());
-  Serial.print("Acceleration: ");
-  Serial.println(motion.getAcc());
-  Serial.print("Jerk: ");
-  Serial.println(motion.getJerk());
-
-  delay(100);  // Delay for readability
+  // get motion parameters
+   float pos = sCurve.getPos();
+  float speed = sCurve.getVel();
+  float acc = sCurve.getAcc();
+  float jerk = sCurve.getJerk();
+// your code
 }
 

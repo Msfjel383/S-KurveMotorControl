@@ -37,7 +37,7 @@ void loop() {
   Serial.println();
   
   // Reverse direction upon reaching the target position
-  if (position >= targetPosition && !motionComplete) {
+  if (position == targetPosition && !motionComplete) {
     motionComplete = true;
     delay(2000); // Pause at target position
     sCurve.start(0.0); // Start motion back to home position

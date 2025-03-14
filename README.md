@@ -33,6 +33,9 @@ To visualize the motion parameters in real-time using the Arduino Serial Plotter
 3. **Open the Serial Plotter**:
    - The plotter will display graphs of position, velocity, acceleration, and jerk.
 
+![image](https://github.com/user-attachments/assets/5e74c62c-5494-40d9-9ec0-77875b7c2f0f)
+
+
 
 ## Usage
 
